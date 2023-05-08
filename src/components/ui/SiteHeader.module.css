@@ -1,0 +1,21 @@
+.SignUpButton {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 1px solid #2d9275;
+  border-radius: 10%;
+  background-color: #29886e;
+}
+
+.LoginButton {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 10px;
+  border: 1px solid #2d9275;
+  border-radius: 10%;
+}
+.LoginButton :hover {
+  background-color: black;
+}
+
+/*# sourceMappingURL=SiteHeader.module.css.map */
