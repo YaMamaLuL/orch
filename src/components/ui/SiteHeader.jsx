@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 import styles from './SiteHeader.module.scss'
 import useStyles from "./SiteHeaderStyles";
 
-const HeaderMegaMenu = () => {
+const SiteHeader = () => {
 
     const { classes } = useStyles();
 
@@ -18,7 +18,7 @@ const HeaderMegaMenu = () => {
                     <img src='/test-img.svg' width="30" alt = "bobby"/>
 
                     <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-                        <NavLink to="/*" className={classes.link}>
+                        <NavLink to="/home" className={classes.link}>
                             Home
                         </NavLink>
                         <NavLink to="/*" className={classes.link}>
@@ -41,4 +41,4 @@ const HeaderMegaMenu = () => {
 
 
 
-export default HeaderMegaMenu
+export default SiteHeader

@@ -60,7 +60,7 @@ const Login = () => {
                                 placeholder="ПримерАдресаМыла@мэил.ру"
                                 value={form.values.email}
                                 onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
-                                error={form.errors.email && 'Invalid email'}
+                                error={form.errors.email && 'имеил инвалид..'}
                                 radius="md"
                             />
 
@@ -70,7 +70,7 @@ const Login = () => {
                                 placeholder="раздватрикувэе"
                                 value={form.values.password}
                                 onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-                                error={form.errors.password && 'Password should include at least 6 characters'}
+                                error={form.errors.password && 'бро) введи норм пароль'}
                                 radius="md"
                             />
 
@@ -85,7 +85,7 @@ const Login = () => {
 
                         <Group position="center" mt="xl">
                             <Button color="green.7" type="submit" radius="xl">
-                                {upperFirst(type)}
+                                Лог ин
                             </Button>
                         </Group>
                     </form>
