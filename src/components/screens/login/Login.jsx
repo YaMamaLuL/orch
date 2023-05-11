@@ -37,7 +37,7 @@ const Login = () => {
             <div className={styles.wrapper}>
                 <Paper radius="md" p="xl" withBorder>
                     <Text size="lg" weight={500}>
-                        Оркестратор передает свой поклон, зарегестрируйся
+                        Оркестратор передает свой поклон, зайди в аккаунт
                     </Text>
 
                     <Divider labelPosition="center" my="lg" />
@@ -85,7 +85,7 @@ const Login = () => {
 
                         <Group position="center" mt="xl">
                             <Button color="green.7" type="submit" radius="xl">
-                                {upperFirst(type)}
+                                Войти
                             </Button>
                         </Group>
                     </form>
