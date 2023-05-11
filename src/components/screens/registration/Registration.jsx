@@ -1,23 +1,11 @@
-import { useToggle, upperFirst } from '@mantine/hooks';
-import { useForm } from '@mantine/form';
-import {
-    TextInput,
-    PasswordInput,
-    Text,
-    Paper,
-    Group,
-    Button,
-    Divider,
-    Checkbox,
-    Stack,
-    MantineColor
-} from '@mantine/core';
-import styles from "./Registration.module.css"
+import {upperFirst, useToggle} from "@mantine/hooks";
+import {useForm} from "@mantine/form";
 import SiteHeader from "../../ui/SiteHeader";
+import styles from "./Registration.module.scss";
+import {Button, Checkbox, Divider, Group, Paper, PasswordInput, Stack, Text, TextInput} from "@mantine/core";
 import SiteFooter from "../../ui/SiteFooter";
 
-const Registration = () => {
-    const [type, toggle] = useToggle(['login', 'register']);
+const Registration =() =>{
     const form = useForm({
         initialValues: {
             email: '',
@@ -38,22 +26,20 @@ const Registration = () => {
             <div className={styles.wrapper}>
                 <Paper radius="md" p="xl" withBorder>
                     <Text size="lg" weight={500}>
-                        Оркестратор передает свой поклон, зарегестрируйся
+                        Оркестратор передает свой поклон, зарегистрируйся
                     </Text>
 
                     <Divider labelPosition="center" my="lg" />
 
                     <form onSubmit={form.onSubmit(() => {})}>
                         <Stack>
-                            {type === 'register' && (
-                                <TextInput
-                                    label="Name"
-                                    placeholder="Your name"
+                            <TextInput
+                                    label="Ваше имя"
+                                    placeholder="Бэйбиджон"
                                     value={form.values.name}
                                     onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
                                     radius="md"
-                                />
-                            )}
+                            />
 
                             <TextInput
                                 required
@@ -71,18 +57,23 @@ const Registration = () => {
                                 placeholder="раздватрикувэе"
                                 value={form.values.password}
                                 onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
+                                error={form.errors.password && 'Password should include at least 6 characters'}
                                 radius="md"
                             />
 
                             <PasswordInput
                                 required
-                                label="Повтори пароль"
-
+                                label="Повторение пароля"
+                                placeholder="раздватрикувэе"
+                                error={form.errors.password && 'Password should include at least 6 characters'}
+                                radius="md"
                             />
 
-                            <Checkbox
-                                label="Я согласен и узнал политику"
 
+                            <Checkbox
+                                color="green"
+                                label="Согласен со всем, что написано в том длинном документе"
+                                onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
                             />
                         </Stack>
 

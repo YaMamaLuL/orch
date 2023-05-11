@@ -1,10 +1,17 @@
-import HeaderMegaMenu from "../../ui/SiteHeader";
-import {NavLink} from "react-router-dom";
+import Header from "../../ui/SiteHeader";
+
 import SiteFooter from "../../ui/SiteFooter";
 
+
+
+
+
+
+
 const Home = () =>{
+
     return <div>
-        <HeaderMegaMenu></HeaderMegaMenu>
+        <Header></Header>
         <SiteFooter></SiteFooter>
     </div>
 }

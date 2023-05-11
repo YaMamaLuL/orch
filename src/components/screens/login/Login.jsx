@@ -37,7 +37,7 @@ const Login = () => {
             <div className={styles.wrapper}>
                 <Paper radius="md" p="xl" withBorder>
                     <Text size="lg" weight={500}>
-                        Оркестратор передает свой поклон, зарегестрируйся
+                        Оркестратор передает свой поклон, зайди в аккаунт
                     </Text>
 
                     <Divider labelPosition="center" my="lg" />
@@ -60,7 +60,7 @@ const Login = () => {
                                 placeholder="ПримерАдресаМыла@мэил.ру"
                                 value={form.values.email}
                                 onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
-                                error={form.errors.email && 'имеил инвалид..'}
+                                error={form.errors.email && 'Invalid email'}
                                 radius="md"
                             />
 
@@ -70,7 +70,7 @@ const Login = () => {
                                 placeholder="раздватрикувэе"
                                 value={form.values.password}
                                 onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-                                error={form.errors.password && 'бро) введи норм пароль'}
+                                error={form.errors.password && 'Password should include at least 6 characters'}
                                 radius="md"
                             />
 
@@ -85,7 +85,7 @@ const Login = () => {
 
                         <Group position="center" mt="xl">
                             <Button color="green.7" type="submit" radius="xl">
-                                Лог ин
+                                Войти
                             </Button>
                         </Group>
                     </form>

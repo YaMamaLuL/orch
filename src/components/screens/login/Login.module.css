@@ -1,7 +1,10 @@
 .wrapper {
+  min-width: 100px;
+  max-width: 450px;
   width: 25%;
-  margin-top: 6%;
-  margin-left: 35%;
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-bottom: -100px;
 }
 
 /*# sourceMappingURL=Login.module.css.map */
