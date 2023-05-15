@@ -26,6 +26,9 @@
       flex-direction: row;
 
       >li{
+        font-size: 20px;
+        width: 100%;
+        height: 300px;
         color: white;
         padding:0 10px;
         background-color: #2d9275;
@@ -34,10 +37,10 @@
         margin-right: 10px;
 
         >h3{
-          margin-top: -33px;
+          margin-top: -43px;
           position: absolute;
           vertical-align: text-top;
-          font-size: 35px;
+          font-size: 45px;
           color: black;
         }
       }
@@ -45,9 +48,30 @@
   }
 
   .dutyWrapper{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    >h1{
+      color: #2d9275;
+      padding-left: 1%;
+    }
 
     .dutyMenu{
+      display: flex;
+      flex-direction: column;
 
+      >li {
+        padding-bottom: 7px;
+        font-size: 23px;
+        list-style-type: none;
+      }
+
+      >li::marker{
+        color: #2d9275;
+        border: 1px solid #2d9275;
+        background-color: #2d9275;
+        border-radius: 10px;
+      }
     }
   }
 }
