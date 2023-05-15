@@ -2,6 +2,7 @@ import {createStyles, rem} from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
     link: {
+        marginBottom:"110",
         display: 'flex',
         alignItems: 'center',
         height: '100%',
